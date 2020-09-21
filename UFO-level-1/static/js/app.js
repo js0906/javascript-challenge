@@ -43,7 +43,7 @@ filterButton.on("click", function () {
 
     // Get the value property of the input element
     var inputValue = inputElement.property("value");
-    
+
     console.log(inputValue);
     console.log(data);
 
@@ -54,17 +54,17 @@ filterButton.on("click", function () {
 
 
 
-   // print out the filtered dates in the webpage
-   filteredData.forEach(function(filterDate) {
-       console.log(filterDate);
-       var row = tbody.append("tr");
+    // print out the filtered dates in the webpage
+    filteredData.forEach(function (filterDate) {
+        console.log(filterDate);
+        var row = tbody.append("tr");
 
-       Object.entries(filterDate).forEach(function([key, value]) {
-       console.log(key, value);
-       var cell = row.append("td");
-       cell.text(value);
-       });
-   });
+        Object.entries(filterDate).forEach(function ([key, value]) {
+            console.log(key, value);
+            var cell = row.append("td");
+            cell.text(value);
+        });
+    });
 });
 
 
